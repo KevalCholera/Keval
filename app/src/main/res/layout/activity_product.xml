@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <EditText
+            android:id="@+id/etElementEditStockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:capitalize="sentences"
+            android:hint="@string/productName"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences"
+            android:padding="@dimen/padding7"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+        <LinearLayout
+            android:id="@+id/llEditStockEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/llEditStockQuantity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edit_background"
+                android:padding="@dimen/padding5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" Q"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:layout_marginLeft="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin3"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etElementEditStockMainQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvElementEditStockQuantityAddSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:gravity="center"
+                android:text=" +"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etElementEditStockQuantityAddSub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edit_background"
+                android:gravity="start|center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@+id/etElementEditStockPrice"
+                android:padding="@dimen/padding3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvElementEditStockQuantityEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:gravity="center"
+                android:text=" ="
+                android:textSize="@dimen/textSize15" />
+
+
+            <LinearLayout
+                android:id="@+id/llEditStockGrandQuantity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edit_background"
+                android:padding="@dimen/padding5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" Q"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:layout_marginLeft="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin3"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etElementEditStockQuantityTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="@dimen/padding3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEditStockQuantityForCreate"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/edit_background"
+            android:padding="@dimen/padding5"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=" Q"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin3"
+                android:layout_marginRight="@dimen/margin3"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/_gray" />
+
+            <EditText
+                android:id="@+id/etElementEditStockQuantityForCreate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEditStockPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/edit_background"
+            android:padding="@dimen/padding5">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/spaced_currency_india"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin3"
+                android:layout_marginRight="@dimen/margin3"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/_gray" />
+
+            <EditText
+                android:id="@+id/etElementEditStockPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llEditStockTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:padding="@dimen/padding5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" %"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:layout_marginLeft="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin3"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etElementEditStockTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin10"
+                android:gravity="bottom"
+                android:text="@string/tax"
+                android:textSize="@dimen/textSize13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvElementEditStockSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editTextHeight"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding20"
+        android:paddingRight="@dimen/padding20"
+        android:text="@string/edit_stock"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize13" />
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/etElementBillingName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="Sevardhan Sopari"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize15" />
+
+            <ImageView
+                android:id="@+id/ivElementRemainderEdit"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                android:background="@mipmap/ic_pencil" />
+
+            <ImageView
+                android:id="@+id/ivElementBillingCross"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                android:background="@mipmap/ic_trash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin5">
+
+            <TextView
+                android:id="@+id/etElementBillingQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="1500.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvElementBillingQuantityPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="4500"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin5"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvElementBillingTax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="145.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvElementBillingDiscount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="145.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvElementBillingTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin3"
+            android:maxLines="1"
+            android:text="1400000000005.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>

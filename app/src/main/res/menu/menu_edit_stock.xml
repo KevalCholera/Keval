@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/reduceStock"
+        android:orderInCategory="100"
+        android:title="Reduce"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/addStock"
+        android:orderInCategory="100"
+        android:title="Add"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>

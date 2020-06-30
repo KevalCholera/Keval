@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding7"
+    android:paddingLeft="@dimen/padding7"
+    android:paddingRight="@dimen/padding7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@drawable/blue_stroke_gray_solid">
+
+        <LinearLayout
+            android:id="@+id/llElementFragmentProductClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_anim"
+            android:orientation="vertical"
+            android:padding="@dimen/padding7">
+
+            <TextView
+                android:id="@+id/tvElementFragmentStockProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sopari"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textSize17" />
+
+            <TextView
+                android:id="@+id/tvElementFragmentStockProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:maxLines="1"
+                android:text="@string/qnty_505_00_kg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvElementFragmentStockProductTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:maxLines="1"
+                android:text="@string/gst_5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvElementFragmentStockProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:maxLines="1"
+                android:text="@string/price_304_00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ivElementFragmentStockProductEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_border"
+                    android:gravity="center"
+                    android:padding="@dimen/padding10"
+                    android:text="@string/edit"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize10"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/ivElementFragmentStockProductDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_border"
+                    android:gravity="center"
+                    android:padding="@dimen/padding10"
+                    android:text="@string/remove"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

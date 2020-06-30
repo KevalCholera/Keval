@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includeSearch"
+            layout="@layout/element_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/lvFragmentStock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <include layout="@layout/element_no_data_layout" />
+    </LinearLayout>
+
+    <com.example.keval.keval.Floating.FloatingActionMenu
+        android:id="@+id/ivFragmentStockMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/padding20"
+        android:visibility="gone"
+        fab:menu_backgroundColor="@color/backgroundElement"
+        fab:menu_icon="@mipmap/menu"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
+
+        <com.example.keval.keval.Floating.FloatingActionButton
+            android:id="@+id/cvFragmentStockSearch"
+            android:layout_width="@dimen/cvElementReviewWidthHeight"
+            android:layout_height="@dimen/cvElementReviewWidthHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin20"
+            android:src="@mipmap/home_search"
+            fab:fab_label="Search"
+            fab:fab_size="mini" />
+
+        <com.example.keval.keval.Floating.FloatingActionButton
+            android:id="@+id/cvFragmentStock"
+            android:layout_width="@dimen/cvElementReviewWidthHeight"
+            android:layout_height="@dimen/cvElementReviewWidthHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin20"
+            android:src="@mipmap/fab_add"
+            fab:fab_label="Add Product"
+            fab:fab_size="mini" />
+
+    </com.example.keval.keval.Floating.FloatingActionMenu>
+
+    <com.example.keval.keval.Floating.FloatingActionButton
+        android:id="@+id/cvFragmentStockSearchClose"
+        android:layout_width="@dimen/cvElementReviewWidthHeight"
+        android:layout_height="@dimen/cvElementReviewWidthHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin20"
+        android:src="@mipmap/action_done"
+        android:visibility="gone" />
+
+    <com.example.keval.keval.Floating.FloatingActionButton
+        android:id="@+id/ivFragmentStockAddStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@mipmap/fab_add"
+        fab:fab_label="Add Stock" />
+
+</RelativeLayout>

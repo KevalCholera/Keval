@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/shareImage"
+        android:orderInCategory="100"
+        android:title="@string/share_image"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/shareData"
+        android:orderInCategory="100"
+        android:title="@string/share_data"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/printBill"
+        android:orderInCategory="100"
+        android:title="@string/print"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/createInvoice"
+        android:icon="@mipmap/action_done"
+        android:orderInCategory="100"
+        android:title="Create Invoice"
+        app:showAsAction="ifRoom" />
+
+</menu>

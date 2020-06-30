@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding7"
+    android:paddingEnd="@dimen/padding7"
+    android:paddingStart="@dimen/padding7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvElementAllTransactionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@drawable/light_blue_full"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingTop="@dimen/padding5"
+            android:text="@string/_03_11_2017"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize13" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvElementAllTransactionClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/ripple_anim"
+            card_view:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_anim"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding10">
+
+                <LinearLayout
+                    android:id="@+id/llElementAllTransactionNameFirstLetter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/circular_view"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvElementAllTransactionNameFirstLetter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvElementAllTransactionNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/invoice"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize10"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvElementAllTransactionAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin5"
+                            android:text="$ 54253.00"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textSize10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvElementAllTransactionName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/keval_cholera"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textSize10" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvElementAllTransactionTotalProduct"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_product_2"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/textSize10" />
+
+                            <com.example.keval.keval.Utils.CircleImageView
+                                android:id="@+id/cvElementAllTransactionPaid"
+                                android:layout_width="@dimen/padding10"
+                                android:layout_height="@dimen/padding10"
+                                android:layout_marginLeft="@dimen/margin20"
+                                android:src="@color/white"
+                                app:civ_fill_color="@color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

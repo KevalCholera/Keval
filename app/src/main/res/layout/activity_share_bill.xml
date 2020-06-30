@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llShareBill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding10"
+    android:scrollbars="none">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize20" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:gravity="end"
+        android:paddingRight="@dimen/padding20"
+        android:text="@string/app_Number_bracket"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize13" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvShareBillDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:gravity="end"
+        android:text="Date:- 20/06/2016"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize13" />
+
+    <TextView
+        android:id="@+id/tvShareBillCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Name:- Keval Cholera"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize13" />
+
+    <TextView
+        android:id="@+id/tvShareBillInvoiceNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invoice No:- 5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize13" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:gravity="center"
+        android:text="Information"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvShareBillItemId"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="Sr."
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <TextView
+            android:id="@+id/tvShareBillItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Product"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <TextView
+            android:id="@+id/tvShareBillItemQnty"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Qnty."
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <TextView
+            android:id="@+id/tvShareBillItemRate"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:gravity="center"
+            android:text="Rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <TextView
+            android:id="@+id/tvShareBillItemTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llShareBillInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin5"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvShareBillGrandTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:gravity="end"
+        android:text="Invoice Total          1501000.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize10" />
+
+    <TextView
+        android:id="@+id/tvShareBillAmountPaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:gravity="end"
+        android:text="Invoice Paid         1501000.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize10" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:layout_gravity="end"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvShareBillAmountDue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:gravity="end"
+        android:text="Invoice Due          1501000.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize10" />
+
+</LinearLayout>

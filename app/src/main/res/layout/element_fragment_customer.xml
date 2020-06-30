@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_anim"
+    android:paddingLeft="@dimen/padding7"
+    android:paddingRight="@dimen/padding7">
+
+    <LinearLayout
+        android:id="@+id/llElementCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_anim"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llElementCustomerCardClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_anim"
+            android:paddingBottom="@dimen/padding7"
+            android:paddingTop="@dimen/padding7">
+
+            <LinearLayout
+                android:id="@+id/llProfilePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/padding15">
+
+                <com.example.keval.keval.Utils.CircleImageView
+                    android:id="@+id/cvProfilePhoto"
+                    android:layout_width="@dimen/cvElementReviewWidthHeight"
+                    android:layout_height="@dimen/cvElementReviewWidthHeight"
+                    android:src="@mipmap/icon_user" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top">
+
+                    <TextView
+                        android:id="@+id/tvElementListOfCustomerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text="@string/keval_cholera"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize13"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin5"
+                        android:gravity="end|center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/currency_india"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textSize10" />
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/tvElementCustomerTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:maxWidth="100dp"
+                            android:text="@string/_100000"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textSize10" />
+
+                        <TextView
+                            android:id="@+id/tvElementCustomerTotalStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:maxWidth="100dp"
+                            android:text="@string/dr"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textSize10" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvElementListOfCustomerShopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/dineshchandra_amp_co"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvElementListOfCustomerNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/_9879374040"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="@dimen/margin65"
+            android:background="@color/color_text_hint" />
+
+    </LinearLayout>
+</LinearLayout>

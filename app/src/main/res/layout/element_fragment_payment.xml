@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding7"
+    android:paddingLeft="@dimen/padding7"
+    android:paddingRight="@dimen/padding7">
+
+    <TextView
+        android:id="@+id/tvElementFragmentDepositDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@drawable/light_blue_full"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding5"
+        android:paddingTop="@dimen/padding5"
+        android:text="@string/_03_11_2017"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize13" />
+
+    <LinearLayout
+        android:id="@+id/llElementFragmentPaymentWholeDayAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin7"
+        android:layout_marginTop="@dimen/margin5"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvElementFragmentDepositWholeDayAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/light_blue_full"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingTop="@dimen/padding5"
+            android:text="@string/_03_11_2017"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize13" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvElementFragmentPaymentClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/ripple_anim"
+        card_view:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_anim"
+            android:padding="@dimen/padding10">
+
+            <LinearLayout
+                android:id="@+id/llElementFragmentDepositNameFirstLetter"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circular_view"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvElementFragmentDepositNameFirstLetter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvElementFragmentDepositNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/payment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvElementFragmentDepositAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin5"
+                        android:text="$ 54253.00"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvElementFragmentDepositName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keval Cholera"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

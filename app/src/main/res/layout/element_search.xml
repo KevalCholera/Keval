@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding10">
+
+            <EditText
+                android:id="@+id/etFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="From Date"
+                android:inputType="datetime"
+                android:minWidth="100dp"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/etToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="To Date"
+                android:inputType="datetime"
+                android:minWidth="100dp"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/padding10">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/imglostitems" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                android:layout_weight="1"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textSize="@dimen/textSize15" />
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_cancel"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/_gray" />
+
+    </LinearLayout>
+
+</LinearLayout>

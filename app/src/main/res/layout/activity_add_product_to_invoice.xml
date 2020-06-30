@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grayborder"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding7">
+
+            <AutoCompleteTextView
+                android:id="@+id/atvAddProductToInvoiceProductName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/productName"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+            <View
+                android:id="@+id/vAddProductToInvoiceCustomerName"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivAddProductToInvoiceProductName"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/array_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grayborder"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding7">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Q"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+                <EditText
+                    android:id="@+id/etAddProductToInvoiceProductQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/ProductQuantity"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAddProductToInvoiceProductType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding5"
+                android:layout_marginRight="@dimen/margin10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grayborder"
+            android:padding="@dimen/padding7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_india"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+                <TextView
+                    android:id="@+id/etAddProductToInvoiceProductPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/ProductPrice"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grayborder"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding7">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+                <TextView
+                    android:id="@+id/etAddProductToInvoiceProductTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/product_gst"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding5"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="@string/tax"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grayborder"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding7">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+
+                <EditText
+                    android:id="@+id/etAddProductToInvoiceProductDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/product_discount"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding5"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="@string/discount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/radio_button_account_background"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingTop="@dimen/padding5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding20"
+                android:text="₹ "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize13" />
+
+            <TextView
+                android:id="@+id/tvAddProductToInvoiceProductTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/padding20"
+                android:text="0.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ProductQuantity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/ProductPrice"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/product_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="Discount on Product Total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/sub_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/gst_on_sub_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/grand_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoiceQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoicePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="* 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvAddProductToInvoiceProductTotalToCalc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="= 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoiceDiscountOnProductTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="- 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoiceSubTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="= 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoiceTaxOnSubTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="+ 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvAdProductToInvoiceGrandTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="= 0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

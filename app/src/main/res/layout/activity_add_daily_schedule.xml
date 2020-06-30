@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editTextHeight"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etAddDailyScheduleDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_background"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/schedule_date"
+                android:inputType="datetime"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/etAddDailyScheduleTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_background"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/schedule_time"
+                android:inputType="datetime"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/edit_background"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/atvAddDailyScheduleCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/customer_name"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:id="@+id/vAddDailyScheduleCustomerName"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivAddDailyScheduleCustomerName"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/array_down" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/amount_to"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+            <Spinner
+                android:id="@+id/spAddDailyScheduleAccount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/addSchedule"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15" />
+
+            <TextView
+                android:id="@+id/tvAddDailyScheduleAccount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/padding5"
+                android:text="@string/collect"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize15"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:gravity="center"
+                android:padding="@dimen/padding5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ " />
+
+                <EditText
+                    android:id="@+id/etAddDailyScheduleAmount"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize15" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etAddDailyScheduleAddInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/edit_background"
+            android:capitalize="sentences"
+            android:gravity="top"
+            android:hint="@string/addition_info"
+            android:maxHeight="150dp"
+            android:maxLength="200"
+            android:minHeight="100dp"
+            android:padding="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAddDailyScheduleSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editTextHeight"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/padding5"
+        android:text="@string/create_schedule"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize15"
+        android:visibility="gone" />
+
+</LinearLayout>

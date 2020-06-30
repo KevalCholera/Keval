@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvElementDepositInvoiceNo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_gravity="end"
+            android:background="@drawable/radio_button_account_background"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvElementDepositDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_gravity="end"
+            android:background="@drawable/radio_button_account_background"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@drawable/edit_background"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/atvDepositCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/customer_name"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:padding="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize13" />
+
+        <View
+            android:id="@+id/vDepositCustomerName"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin10"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivDepositCustomerName"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin10"
+            android:scaleType="fitXY"
+            android:src="@mipmap/array_down" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/payment_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/editTextHeight"
+            android:background="@drawable/edit_background"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding5"
+            android:paddingTop="@dimen/padding5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin7"
+                android:text="@string/currency_india"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <EditText
+                android:id="@+id/etElementDepositAmount"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llElementPaymentStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvElementPaymentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/payment_status"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+        <View
+            android:layout_width="@dimen/margin30"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvElementPaymentRupeeSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding3"
+            android:paddingRight="@dimen/padding3"
+            android:text="@string/currency_india"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+        <TextView
+            android:id="@+id/tvElementPaymentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+    </LinearLayout>
+
+</LinearLayout>

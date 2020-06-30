@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includeSearch"
+            layout="@layout/element_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/lvCustomerAccount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:paddingTop="@dimen/padding7"
+            android:visibility="visible" />
+
+        <include layout="@layout/element_no_data_layout" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@drawable/light_blue_full"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingLeft="@dimen/padding20"
+            android:paddingRight="@dimen/padding20"
+            android:paddingTop="@dimen/padding5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currency_india"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize15" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvCustomerAccountTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4545454"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize15" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvCustomerAccountTotalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin3"
+                android:text="Dr."
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.keval.keval.Floating.FloatingActionButton
+        android:id="@+id/cvCustomerAccountSearch"
+        android:layout_width="@dimen/cvElementReviewWidthHeight"
+        android:layout_height="@dimen/cvElementReviewWidthHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin30"
+        android:layout_marginRight="@dimen/margin20"
+        android:src="@mipmap/home_search"
+        android:visibility="visible" />
+
+    <com.example.keval.keval.Floating.FloatingActionButton
+        android:id="@+id/cvCustomerAccountSearchClose"
+        android:layout_width="@dimen/cvElementReviewWidthHeight"
+        android:layout_height="@dimen/cvElementReviewWidthHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin30"
+        android:layout_marginRight="@dimen/margin20"
+        android:src="@mipmap/action_done"
+        android:visibility="gone" />
+</RelativeLayout>

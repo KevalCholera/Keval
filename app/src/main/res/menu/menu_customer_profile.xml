@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editProfile"
+        android:orderInCategory="100"
+        android:title="@string/editProfile" />
+    <item
+        android:id="@+id/menuCustomerProfileInvoice"
+        android:orderInCategory="100"
+        android:title="@string/createInvoice" />
+    <item
+        android:id="@+id/menuCustomerProfileDeposit"
+        android:orderInCategory="100"
+        android:title="@string/add_payment" />
+    <item
+        android:id="@+id/menuCustomerProfileShareData"
+        android:orderInCategory="100"
+        android:title="@string/shareData" />
+    <item
+        android:id="@+id/menuCustomerProfilePrint"
+        android:orderInCategory="100"
+        android:title="@string/print" />
+</menu>

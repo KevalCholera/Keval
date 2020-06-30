@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editTextHeight"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_button_account_background"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/tvInvoiceTotalSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSize13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/currency_india"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSize13" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="0.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSize13" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvInvoiceDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/radio_button_account_background"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/edit_background"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/atvInvoiceCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/customer_name"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:id="@+id/vInvoiceCustomerName"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivInvoiceCustomerName"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/array_down" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvInvoiceAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/padding5"
+            android:text="@string/add_product"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize10" />
+
+        <ListView
+            android:id="@+id/lvInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/cbInvoiceDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="@string/invoice_disc" />
+
+            <LinearLayout
+                android:id="@+id/llInvoiceDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding5"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding5"
+                    android:paddingRight="@dimen/padding5"
+                    android:text="%"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etInvoiceDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/discount"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="80dp"
+                    android:paddingRight="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvInvoiceAmountDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|bottom"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:text=""
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/cbInvoiceShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="@string/shipping_charge" />
+
+            <LinearLayout
+                android:id="@+id/llInvoiceShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding5"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding5"
+                    android:paddingRight="@dimen/padding5"
+                    android:text="@string/currency_india"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etInvoiceShipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/charge"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="80dp"
+                    android:paddingRight="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvInvoiceShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|bottom"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:text=""
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/cbInvoiceAddPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="@string/pay_now" />
+
+            <LinearLayout
+                android:id="@+id/llInvoicePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding5"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding5"
+                    android:paddingRight="@dimen/padding5"
+                    android:text="@string/currency_india"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin3"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:background="@color/_gray" />
+
+                <EditText
+                    android:id="@+id/etInvoicePayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/payment"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="80dp"
+                    android:paddingRight="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize13" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvInvoiceAmountPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|bottom"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:text=""
+                android:textSize="@dimen/textSize13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invoice_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/invoice_discount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/invoice_sub_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/shipping_charge"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/grand_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:id="@+id/tvInvoicePaymentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/complete_transaction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/final_total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/invoice_paid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/invoice_due"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceTotalToCalc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="="
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceShippingCalc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="="
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceGrandTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInvoiceAmountStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvInvoiceAmountStatusSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceAmountStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="= "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceFinalTotalSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceFinalTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceAmountPaidCalc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="="
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceDueSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/currency_india"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceDue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize10" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

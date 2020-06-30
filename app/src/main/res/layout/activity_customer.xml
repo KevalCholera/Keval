@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin10"
+        android:paddingTop="@dimen/margin10">
+
+        <com.example.keval.keval.Utils.CircleImageView
+            android:id="@+id/cvProfilePhoto"
+            android:layout_width="@dimen/cvActivityReviewWidthHeight"
+            android:layout_height="@dimen/cvActivityReviewWidthHeight"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_user"
+            app:civ_border_color="@color/primaryDark"
+            app:civ_border_width="1dp" />
+
+        <Button
+            android:id="@+id/btCustomerChangePic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/light_blue_full"
+            android:paddingEnd="@dimen/padding10"
+            android:paddingStart="@dimen/padding10"
+            android:text="@string/change_profile_pic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize10"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/padding10">
+
+            <EditText
+                android:id="@+id/etProfileCustomerShopName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/grayborder"
+                android:capitalize="sentences"
+                android:hint="@string/enter_shop_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:capitalize="sentences"
+                android:hint="@string/enter_customer_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:capitalize="sentences"
+                android:digits=" 0123456789"
+                android:hint="@string/enter_customer_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:hint="@string/enter_customer_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerTin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:hint="@string/enter_gstn"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerShopAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:capitalize="sentences"
+                android:gravity="top"
+                android:hint="@string/enter_invoice_address"
+                android:minHeight="100dp"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_city"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerCity"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_state"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerState"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etProfileCustomerPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:hint="@string/enter_city_pincode"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_country"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerCountry"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbCustomerShipAnotherAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="@string/ship_to_different_address" />
+
+            <EditText
+                android:id="@+id/etProfileCustomerOtherShopAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:capitalize="sentences"
+                android:gravity="top"
+                android:hint="@string/enter_shipping_address"
+                android:minHeight="100dp"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llCustomerOtherCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerOtherCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_shipping_city"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerOtherCity"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCustomerOtherState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerOtherState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_shipping_state"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerOtherState"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etProfileCustomerOtherPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:hint="@string/enter_shipping_city_pincode"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llCustomerOtherCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvCustomerOtherCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/enter_shipping_country"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_gray"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin10"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivCustomerOtherCountry"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/array_down" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spCustomerGender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/grayborder"
+                android:entries="@array/gender"
+                android:gravity="center"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/_gray"
+                android:textSize="@dimen/textSize15" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
